@@ -1,0 +1,37 @@
+<script>
+    // DATA
+    const PIN = "0009" //"1234"  // WHY NOT NUMBER?
+         pin  = ""      //""
+    let tries = 0
+    let balance = 10000000.00
+    while(true){
+    pin = +prompt("Enter pin:")
+    tries++
+
+    if (pin == PIN){
+        
+        /////////////////
+
+        alert(`acces gradent \n\n Your balance : ${balance} MDL 
+        
+        `)
+        let money = +prompt("withdrow:?")
+        
+//HW1: upgrade - check balance - verificati balanta daca pe cont sint atitea bani
+//hw2: max money = 50000.00- o limita, nu se poate retrage mai mult de cit 50.000
+
+        balance -= money // balance = balance - money
+        alert(`succes!!\n\n
+        your balance: ${balance} MDL`)
+        
+        ////////////////
+        break
+    } else{
+        alert("wrong pin")
+        if(tries == 3){
+            alert("card blocked")
+            break // force while stop
+        }
+    }
+}
+</script>
