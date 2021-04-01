@@ -1,0 +1,41 @@
+<script>
+    // switch -> branching
+    // choose the day
+    //formula
+    
+    let calendar = prompt("Chose the calendar Iulian OR Julian")
+    let day = parseInt(prompt("Day of the week?"))
+
+// 1: cu ajutorul lui if-else si plus un prompt() (am adaugat mai sus)
+//    - what calendar (unde saptamina incepe cu sunday si unde saptmina incepe cu Monday) 
+  
+       
+        switch (day){ // === identic
+        case 1:document.write("Monday");
+        break
+        case 2: document.write("Tuesday");
+        break
+        case 3: document.write("Wednesday");
+        break
+        case 4: document.write("Thursday");
+        break
+        case 5: 
+            let times = 3
+            while(times > 0){
+                document.write("Yeeeeees !!! ")
+                times--
+            }     
+        document.write("Friday");
+        break
+        case 6: document.write("Saturday");
+        break
+        case 7: document.write("Sunnday");
+        break
+        default: document.write("Are you crazy? :D");
+        
+        }
+
+
+
+     
+</script>
