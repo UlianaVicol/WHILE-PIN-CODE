@@ -1,0 +1,31 @@
+<button onclick=" moveLeft();drowMap()">◀</button>
+<span id="gameMap"></span>
+<button onclick="moveRight();drowMap()">▶</button>
+<script>
+    const LEN = 20
+    let rx    = 10
+    let ry    = 10
+
+    function drowMap() {
+        gameMap.innerHTML = ""
+        for(let x=1; x<=LEN; x++){
+            if(x == rx){
+            gameMap.innerHTML += " ▶ "
+            }  else if(x == ry){
+            gameMap.innerHTML += " ◀ "
+            }else {
+                gameMap.innerHTML += "﹍"
+            }
+        }
+    }
+    //2: limit movement:  start si la end
+    function moveLeft(){
+        // SARCINA 
+        //1: finish this function - se pareca am facut-o deja
+    }
+    function moveRight(){
+        rx++
+}
+    drowMap()
+    </script>
+    
