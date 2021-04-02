@@ -4,7 +4,7 @@
     let  pin     = ""      
     let tries    = 0
     let balance  = 10000000.00
-    let max     = 50000.00
+    let limit      = 50000.00
     
     while(true){
     pin = +prompt("Enter pin:")
@@ -19,22 +19,35 @@
         `)
         let money = +prompt("withdrow:?")
  
- // Sarcinile             
-//1: upgrade - check balance - verificati balanta daca pe cont sint atitea bani
-//2: max money = 50000.00- o limita, nu se poate retrage mai mult de cit 50.000
+        if (money >= 50.000) {
 
-        balance -= money // balance = balance - money
-        alert(`Succes!!\n\n
-        your balance: ${balance} MDL`)
+            if (money <= balance) {
+				balance -= money;
+				alert("Transaction successful!");
+				alert("Your remaining balance is MDL" + balance);
+				toContinue();
+			    } else {
+				alert("You do not have sufficient funds!");
+				money();
+			    }
+		    } 
+
+            // Sarcinile             
+            //1: upgrade - check balance - verificati balanta daca pe cont sint atitea bani
+            //2: max money = 50000.00- o limita, nu se poate retrage mai mult de cit 50.000
+
+            //balance -= money // balance = balance - money
+            //alert(`Succes!!\n\n
+            //your balance: ${balance} MDL`)
         
         ////////////////
-        break
-    } else{
-        alert("wrong pin")
-        if(tries == 3){
-            alert("Card blocked")
-            break // force while stop
+            break
+            } else{
+            alert("wrong pin")
+            if(tries == 3){
+                alert("Card blocked")
+                break // force while stop
+                }
+            }
         }
-    }
-}
 </script>
