@@ -20,12 +20,21 @@
     }
     //2: limit movement:  start si la end
     function moveLeft(){
-        ry--
+          if(ry > 1){ 
+        	ry-- 
+        }else{
+        	alert("Outside the range");
+        }
+
         // SARCINA 
-        //1: finish this function - se pareca am facut-o deja :D
+        //1: finish this function 
     }
     function moveRight(){
-        rx++
+        if(rx < LEN){ 
+        	rx++ 
+    	}else{
+    		alert("Outside the range");
+    	}
 }
     drowMap()
     </script>
